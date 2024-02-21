@@ -1,6 +1,7 @@
 # EduMoodUp - GDSC Solution Challenge 2024
 
 This repository contains three different projects developed on different platforms.
+Website: edumoodup.com
 
 ## Website
 
