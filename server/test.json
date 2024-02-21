@@ -1,0 +1,31 @@
+{
+  "name": "Erzincan Üniversitesi",
+  "fakulteler": [
+    {
+      "fakulteisim": "Mühendislik",
+      "bolumler": [
+        {
+          "bolumısım": "Bilgisayar Müh..",
+          "Dersler": [{ "sinifid": 1, "isim": "", "ogretmenid": "" }]
+        },
+        {
+          "bolumısım": "İnşaat",
+          "Dersler": [{ "sinifid": 1, "isim": "", "ogretmenid": "" }]
+        }
+      ]
+    },
+    {
+      "fakulteisim": "Fen Edebiyat",
+      "bolumler": [
+        {
+          "bolumısım": "Matematik Öğretmenliği",
+          "Dersler": [{ "sinifid": 1, "isim": "", "ogretmenid": "" }]
+        },
+        {
+          "bolumısım": "Fizik",
+          "Dersler": [{ "sinifid": 1, "isim": "", "ogretmenid": "" }]
+        }
+      ]
+    }
+  ]
+}

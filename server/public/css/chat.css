@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+
+
+
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #404249;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.searchbar {
+  margin: 20px 0 0px 16px;
+  padding-bottom: 20px;
+}
+
+.mainheader {
+  position: sticky;
+  top: 0;
+  background-color: #1e1f22;
+}
+
+.searchbar input {
+  padding: 4px 30px;
+  border-radius: 15px 0 0 15px;
+  border: 0px;
+  transition: 0.3 ease-in-out;
+}
+
+.searchbar input::selection {
+  border: 1px solid black;
+}
+
+.mainfriendpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.friendpage {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.friendpage input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+
+.friend {
+  display: flex;
+  border-radius: 40px;
+
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  background-color: orange;
+  color: white;
+  transition: 0.3s;
+}
+
+
+
+.friendrequest {
+  transition: 0.3s;
+}
+
+.friendrequest:hover {
+
+  transform: translateX(10px)
+}
+
+.cancelfriendreq {
+  margin-right: 5px;
+}
+
+.cancelfriendreq:hover {
+  transform: translateX(-10px)
+}
+
+.friendname {
+  margin-right: 20px;
+}
+
+.searchbar button {
+  margin-left: 2px;
+  margin-right: 16px;
+  padding: 4px 15px;
+  border-radius: 0 15px 15px 0;
+  border: 0px;
+  cursor: pointer;
+  background-color: #5865f2;
+  color: white;
+  transition: 0.3s;
+}
+
+.searchbar button:hover {
+  background-color: #3444f1;
+}
+
+.searchbar button:active {
+  scale: 0.9;
+}
+
+.user {
+  display: flex;
+  margin: 24px 16px;
+  color: white;
+}
+
+.user .online {
+  color: rgb(36, 199, 36);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 140px;
+  display: block;
+}
+
+.user .offline {
+  color: rgb(228, 47, 47);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 140px;
+  display: block;
+}
+
+.chat-box {
+  overflow-y: auto;
+}
+
+.image {
+  margin-right: 16px;
+  display: flex;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1f22;
+  align-items: center;
+}
+
+.header .header-img {
+  margin: 16px 16px 8px 16px;
+  display: flex;
+  overflow: hidden;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.header .settings {
+  font-size: 20px;
+  margin: 24px;
+  color: white;
+}
+
+.header .settings i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header .settings i:hover {
+  background-color: #323144;
+}
+
+.header .owner {
+
+  color: white;
+}
+
+.chat {
+  flex-grow: 1;
+  background-color: #2e3035;
+  display: flex;
+  flex-direction: column;
+}
+
+.nameandpp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chat header {
+  color: white;
+  background-color: #4c4d50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.chat img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 4px 0 4px 4px;
+}
+
+.chat .settings {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.chat .settings:hover {
+  background-color: #1e1f22;
+}
+
+.chat-box {
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  height: 76vh;
+  flex-direction: column;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+}
+
+.received {
+  background-color: #e1e1e1;
+  text-align: left;
+  border-radius: 10px 10px 10px 0;
+}
+
+.sent {
+  background-color: #5865f2;
+  color: #fff;
+  text-align: right;
+  border-radius: 10px 10px 0 10px;
+}
+
+.message-content {
+  padding: 5px;
+}
+
+/* Önceki CSS kuralları burada */
+
+.input-container {
+  display: flex;
+  margin: 10px;
+}
+
+#message-input {
+  flex: 1;
+  padding: 8px;
+  border: none 1px solid;
+  border-radius: 24px 0 0 24px;
+}
+
+button {
+  background-color: #5865f2;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 0 24px 24px 0;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+button:hover {
+  background-color: #3444f1;
+}
+
+.friendwriting {
+  overflow-y: auto;
+}
+
+.fa-x {
+  margin-bottom: 20px;
+  color: red;
+  width: 100%;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dropdownmenu {
+  position: fixed;
+  width: 200px;
+  padding: 10px;
+  z-index: 2;
+  display: none;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+}
+
+.dropdownmenu2 {
+  position: fixed;
+  display: none;
+  width: 220px;
+  padding: 10px;
+  z-index: 2;
+  top: 5px;
+  right: 80px;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+}
+
+.dropdownli a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: black;
+}
+
+.arkadaslar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-circle {
+  margin-right: 10px;
+  color: #3444f1;
+  font-size: 10px;
+}
+
+.dropdownli p {
+  text-decoration: none;
+  transition: 0.3s;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdownli a:hover {
+  color: #3444f1;
+}
+
+.dropdownli p:hover {
+  color: #3444f1;
+}
+
+.dropdownul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdownli {
+  list-style-type: none;
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  /* Kaydırma çubuğu genişliği */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+  /* Kaydırma çubuğu tutma kolunun rengi */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Kaydırma çubuğu arka plan rengi */
+}
+
+
+/*responsive*/
+.owner h4 {
+  max-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.header-img img {
+  width: 50px;
+  height: 50px;
+}
+
+.sidebar {
+  min-width: 270px;
+}
+
+.fa-arrow-left {
+  display: none;
+}
+
+.fa-arrow-right {
+  display: none;
+}
+
+@media (max-width:768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .fa-arrow-right {
+    display: inline-block;
+  }
+}
+
+@media (min-width:768px) {
+  .sidebar {
+    display: block;
+  }
+
+  .fa-arrow-right {
+    display: none;
+  }
+
+  .fa-arrow-left {
+    display: none;
+  }
+}

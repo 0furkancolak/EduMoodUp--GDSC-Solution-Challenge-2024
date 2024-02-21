@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: var(--font-poppins);
+}
+
+@layer components {
+    .btn-primary {
+      @apply rounded-lg bg-blue-600 text-white font-bold transition-colors duration-300 hover:bg-blue-700 px-6 py-2
+    }
+
+}
+
+.dancing {
+    font-family: var(--font-dancing);
+}
+
+.scrollbar {
+    scrollbar-width: thin;
+    /* Scrollbar genişliği */
+    scrollbar-color: #ddd #caccd1;
+    /* Scrollbar rengi ve thumb rengi */
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+    padding: 2px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 1rem;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ddd;
+  }
