@@ -1,6 +1,7 @@
+//use-media hooku otomatik olarak sayfanın 768px olup olmadığını söyleyecek eğer değer verilirse o değere göre boolean bir ifade döner
 import { useEffect, useState } from "react";
 
-export default function useMedia(width = 1024) {
+export default function useMedia(width = 768) {
 
     const [status, setStatus] = useState(window.matchMedia(`(max-width: ${width}px)`).matches)
 

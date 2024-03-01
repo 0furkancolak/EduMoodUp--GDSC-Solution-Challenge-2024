@@ -8,7 +8,7 @@ router.post("/register", UniController.registerUniversity);
 
 router.get("/get-faculty/:id", UniController.getFaculty)
 router.get("/get-department/:id", UniController.getDepartment)
-
+ 
 router.post("/add-faculty", UniController.addFaculty)
 router.post("/add-department", UniController.addDepartment)
 router.post("/add-lesson", UniController.addLessons)

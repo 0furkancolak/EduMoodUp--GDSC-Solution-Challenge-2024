@@ -46,9 +46,12 @@ const registerUniversity = async (req, res) => {
   if (unicontrol) {
     return res.status(401);
   }
+
+  let hashedPass = await bcrypt.hash(password, 10)
+
   const newUser = new UNI({
     email: email,
-    password: await bcrypt.hash(password, 10),
+    password: hashedPass,
     name: name,
   });
 
@@ -62,6 +65,7 @@ const registerUniversity = async (req, res) => {
   const jwtToken = jwt.sign(jwtBilgileri, process.env.CONFIRM_MAIL_JWT_SECRET, {
     expiresIn: "1d",
   });
+
   console.log(jwtToken);
 
   //MAIL GONDERME ISLEMLERI
@@ -93,9 +97,8 @@ const registerUniversity = async (req, res) => {
       transporter.close();
     }
   );
-  //mobil uygulamaya yönlendirme
 
-  return res.status(200);
+  res.status(200)
 };
 
 const addFaculty = async (req, res) => {
