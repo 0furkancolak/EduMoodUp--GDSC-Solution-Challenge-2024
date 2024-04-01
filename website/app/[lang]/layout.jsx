@@ -5,7 +5,7 @@ import Navbar from "../UI/layout/navbar/Navbar";
 import Footer from "../UI/layout/footer/Footer";
 import ReduxProvider from "../UI/provider/ReduxProvider";
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const poppins = Poppins({
